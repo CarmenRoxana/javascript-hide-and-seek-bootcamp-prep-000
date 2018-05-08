@@ -7,3 +7,23 @@ function nestedTarget() {
   const el= document.querySelector('#nested .target');
   return el;
 }
+
+function increaseRankBy(n){
+  const lis = document.getElementById('app').querySelectorAll('ul.ranked-list li');
+ 
+for (let i = 0; i < lis.length; i++) {
+  lis[i].innerHTML=parseInt(lis[i].innerHTML)+n;
+  
+}
+}
+
+  
+function deepestChild(){
+var node=document.getElementById('grand-node');  
+var nextnode=node.children[0];
+while (nextnode) {
+node=nextnode;
+nextnode=node.children[0]; 
+}
+return node;
+}
